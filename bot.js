@@ -18,27 +18,27 @@ bot.hears('/bot', async (ctx) => {
       for (let i = 0; i <= 0; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
-         if(number+number2===5){
+         if(Number(number)+Number(number2)===5){
             res++;
          }
-         if(number+number2===6){
+         if(Number(number)+Number(number2)===6){
             res6++;
          }
          
-         if(number+number2===7){
+         if(Number(number)+Number(number2)===7){
             res7++;
          }
          
-         if(number+number2===8){
+         if(Number(number)+Number(number2)===8){
             res8++;
          }
          
-         if(number+number2===9){
+         if(Number(number)+Number(number2)===9){
             res9++;
          }
       }
       console.log(res)
-      console.log(number+number2)
+      console.log(Number(number)+Number(number2))
       console.log(res7)
       console.log(res8)
       console.log(res9)

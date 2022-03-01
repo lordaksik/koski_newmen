@@ -14,67 +14,48 @@ bot.hears('/bot', async (ctx) => {
       const response = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/1/")
       const data = await response.json()
       var res=0,total=0;
-      var total2=0;
-      var total_men=0;
-      var total_men2=0;
-      var win=0,win2=0;
-      for (let i = 0; i <= 29; i++) {
+      var res6=0,res7=0,res8=0,res9=0;
+      for (let i = 0; i <= 3; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
-         if(number===number2){
+         if(number+number2===5){
             res++;
+         }
+         if(number+number2===6){
+            res6++;
+         }
+         
+         if(number+number2===7){
+            res7++;
+         }
+         
+         if(number+number2===8){
+            res8++;
+         }
+         
+         if(number+number2===9){
+            res9++;
          }
       }
       console.log(res)
-      if(res===30){
-         ctx.reply("Ничьи не было 30 бросков");
+      console.log(res6)
+      console.log(res7)
+      console.log(res8)
+      console.log(res9)
+      if(res===4){
+         ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 5, 4 раза подряд");
       }
-      for (let i = 0; i <= 6; i++) {
-         number = data.items.results[i].results[0].number
-         number2 = data.items.results[i].results[1].number
-         console.log(number+" "+number2)
-         if(number>3){
-            total++;
-         }
-         if(number<4){
-            total_men++;
-         }
-          if(number2<4){
-            total_men2++;
-         }
-         if(number2>3){
-            total2++;
-         }
-      
-      }
-      console.log(total+" "+total2+" "+total_men+" "+total_men2)
-     if(total===7){
-     ctx.reply("7 бросков на КРАСНОМ больше 3 точек");
+      if(res===4){
+        ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 6, 4 раза подряд");
      }
-       if(total2===7){
-     ctx.reply("7 бросков на СИНЕМ больше 3 точек");
+     if(res===4){
+        ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 7, 4 раза подряд");
      }
-        if(total_men===7){
-     ctx.reply("7 бросков на КРАСНОМ меньше 4 точек");
+     if(res===4){
+        ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 8, 4 раза подряд");
      }
-        if(total_men2===7){
-     ctx.reply("7 бросков на СИНЕМ меньше 4 точек");
-     }
-     for (let i = 0; i <= 6; i++) {
-         number = data.items.results[i].results[0].number
-         number2 = data.items.results[i].results[1].number
-         if(number>number2){
-            win++;
-         }
-        if(number<number2){
-            win2++;
-         }
-      }
- if(win===7){
-     ctx.reply("КРАСНЫЙ победил 7 раз подряд");
-     }
-       if(win2===7){
-     ctx.reply("СИНИЙ победил 7 раз подряд");
+     if(res===4){
+        ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 9, 4 раза подряд");
      }
    }
    function good() {

@@ -15,7 +15,7 @@ bot.hears('/bot', async (ctx) => {
       const data = await response.json()
       var res=0,total=0;
       var res6=0,res7=0,res8=0,res9=0;
-      for (let i = 0; i <= 3; i++) {
+      for (let i = 0; i <= 0; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
          if(number+number2===5){
@@ -38,23 +38,23 @@ bot.hears('/bot', async (ctx) => {
          }
       }
       console.log(res)
-      console.log(res6)
+      console.log(number+number2)
       console.log(res7)
       console.log(res8)
       console.log(res9)
-      if(res===4){
+      if(res===1){
          ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 5, 4 раза подряд");
       }
-      if(res===4){
+      if(res===1){
         ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 6, 4 раза подряд");
      }
-     if(res===4){
+     if(res===1){
         ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 7, 4 раза подряд");
      }
-     if(res===4){
+     if(res===1){
         ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 8, 4 раза подряд");
      }
-     if(res===4){
+     if(res===1){
         ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 9, 4 раза подряд");
      }
    }

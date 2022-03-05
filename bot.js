@@ -15,7 +15,7 @@ bot.hears('/bot', async (ctx) => {
       const data = await response.json()
       var res=0,total=0;
       var res6=0,res7=0,res8=0,res9=0;
-      for (let i = 0; i <= 2; i++) {
+      for (let i = 0; i <= 6; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
          if(parseInt(number,10)+parseInt(number2,10)===5){
@@ -39,7 +39,7 @@ bot.hears('/bot', async (ctx) => {
       }
       console.log(res)
       console.log(parseInt(number,10)+parseInt(number2,10))
-      if(res===8){
+      if(res===7){
          ctx.reply("Сумма костей от 5 до 9,  8 раз подряд");
       }
    }

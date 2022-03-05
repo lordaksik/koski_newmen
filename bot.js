@@ -22,19 +22,19 @@ bot.hears('/bot', async (ctx) => {
             res++;
          }
          if(parseInt(number,10)+parseInt(number2,10)===6){
-            res;
+            res++;
          }
          
          if(parseInt(number,10)+parseInt(number2,10)===7){
-            res;
+            res++;
          }
          
          if(parseInt(number,10)+parseInt(number2,10)===8){
-            res;
+            res++;
          }
          
          if(parseInt(number,10)+parseInt(number2,10)===9){
-            res;
+            res++;
          }
          console.log(parseInt(number,10)+parseInt(number2,10))
       }

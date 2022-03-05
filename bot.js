@@ -10,7 +10,7 @@ bot.start((ctx) => {
 bot.help((ctx) => ctx.reply('Напиши /bot '))
 bot.hears('/bot', async (ctx) => {
    async function request2() {
-        try {
+      
       const response = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/1/")
       const data = await response.json()
       var res=0,total=0;
@@ -36,9 +36,7 @@ bot.hears('/bot', async (ctx) => {
          if(parseInt(number,10)+parseInt(number2,10)===9){
             res;
          }
-          } catch (err) {
-      ctx.reply("проблема с сервером, при этом сообщении сообщить админу и перезапустить бота");
-   }
+        
       }
       console.log(res)
       console.log(parseInt(number,10)+parseInt(number2,10))

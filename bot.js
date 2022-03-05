@@ -22,41 +22,26 @@ bot.hears('/bot', async (ctx) => {
             res++;
          }
          if(parseInt(number,10)+parseInt(number2,10)===6){
-            res6++;
+            res;
          }
          
          if(parseInt(number,10)+parseInt(number2,10)===7){
-            res7++;
+            res;
          }
          
          if(parseInt(number,10)+parseInt(number2,10)===8){
-            res8++;
+            res;
          }
          
          if(parseInt(number,10)+parseInt(number2,10)===9){
-            res9++;
+            res;
          }
       }
       console.log(res)
       console.log(parseInt(number,10)+parseInt(number2,10))
-      console.log(res7)
-      console.log(res8)
-      console.log(res9)
-      if(res===3){
-         ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 5,  раза подряд");
+      if(res===8){
+         ctx.reply("Сумма костей от 5 до 9,  8 раз подряд");
       }
-      if(res6===3){
-        ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 6, 4 раза подряд");
-     }
-     if(res7===3){
-        ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 7, 4 раза подряд");
-     }
-     if(res8===3){
-        ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 8, 4 раза подряд");
-     }
-     if(res9===3){
-        ctx.reply("ОБЩЕЕ ЧИСЛО НА КОСТЯХ 9, 4 раза подряд");
-     }
    }
    function good() {
       ctx.reply( "Вы запустили Бота на стратегию «Кости» ⚠ Не забудьте поставить особые уведомления на Бота, и ждите сигнала на валуйные ситуации!");

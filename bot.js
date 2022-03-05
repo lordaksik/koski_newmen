@@ -15,7 +15,7 @@ bot.hears('/bot', async (ctx) => {
       const data = await response.json()
       var res=0,total=0;
       var res6=0,res7=0,res8=0,res9=0;
-      for (let i = 0; i <= 6; i++) {
+      for (let i = 0; i <= 3; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
          if(parseInt(number,10)+parseInt(number2,10)===5){
@@ -36,11 +36,10 @@ bot.hears('/bot', async (ctx) => {
          if(parseInt(number,10)+parseInt(number2,10)===9){
             res;
          }
-        
+         console.log(parseInt(number,10)+parseInt(number2,10))
       }
-      console.log(res)
-      console.log(parseInt(number,10)+parseInt(number2,10))
-      if(res===7){
+      
+      if(res===4){
          ctx.reply("Сумма костей от 5 до 9,  8 раз подряд");
       }
    }
@@ -48,7 +47,7 @@ bot.hears('/bot', async (ctx) => {
       ctx.reply( "Вы запустили Бота на стратегию «Кости» ⚠ Не забудьте поставить особые уведомления на Бота, и ждите сигнала на валуйные ситуации!");
        ctx.reply( "Удачи! По всем вопросам пишите @BetgamesTV_Admin"); 
       ctx.reply('Бот отслежки запущен!')
-      global.time = setInterval(request2, 45000)
+      global.time = setInterval(request2, 30000)
    }
    good()
 }

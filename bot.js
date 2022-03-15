@@ -15,7 +15,7 @@ bot.hears('/bot', async (ctx) => {
       const data = await response.json()
       const response2 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/2/")
       const data2 = await response2.json()
-      const response3 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/2/")
+      const response3 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/3/")
       const data3 = await response3.json()
       var res=0,total=0;
       var n1=0,n2=0,n3=0,n4=0,n5=0,n6=0;

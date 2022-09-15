@@ -17,6 +17,12 @@ bot.hears('/bot', async (ctx) => {
       const data2 = await response2.json()
       const response3 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/3/")
       const data3 = await response3.json()
+      const response4 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/4/")
+      const data4 = await response4.json()
+      const response5 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/5/")
+      const data5 = await response5.json()
+      const response6 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/6/")
+      const data6 = await response6.json()
       var res=0,total=0;
       var n1=0,n2=0,n3=0,n4=0,n5=0,n6=0;
       var n11=0,n21=0,n31=0,n41=0,n51=0,n61=0;
@@ -24,84 +30,7 @@ bot.hears('/bot', async (ctx) => {
       var a1=0,a2=0,a3=0,a4=0,a5=0,a6=0;
       var b1=0,b2=0,b3=0,b4=0,b5=0,b6=0;
       var res6=0,res7=0,res8=0,res9=0;
-      
-      for (let i = 0; i <= 24; i++) {
-         number = data.items.results[i].results[0].number
-         number2 = data.items.results[i].results[1].number
-         if(parseInt(number,10)!=1){
-         a1++;
-         }
-          if(parseInt(number,10)!=2){
-         a2++;
-         }
-          if(parseInt(number,10)!=3){
-         a3++;
-         }
-          if(parseInt(number,10)!=4){
-         a4++;
-         }
-          if(parseInt(number,10)!=5){
-         a5++;
-         }
-          if(parseInt(number,10)!=6){
-         a6++;
-         }
-           if(parseInt(number2,10)!=1){
-         b1++;
-         }
-          if(parseInt(number2,10)!=2){
-         b2++;
-         }
-          if(parseInt(number2,10)!=3){
-         b3++;
-         }
-          if(parseInt(number2,10)!=4){
-         b4++;
-         }
-          if(parseInt(number2,10)!=5){
-         b5++;
-         }
-          if(parseInt(number2,10)!=6){
-         b6++;
-         }
-      }
-      if(a1===25){
-         ctx.reply("1 у красной кости не было  25 раз подряд");
-      }
-       if(a2===25){
-         ctx.reply("2 у красной кости не было  25 раз подряд");
-      }
-       if(a3===25){
-         ctx.reply("3 у красной кости не было  25 раз подряд");
-      }
-       if(a4===25){
-         ctx.reply("4 у красной кости не было  25 раз подряд");
-      }
-       if(a5===25){
-         ctx.reply("5 у красной кости не было  25 раз подряд");
-      }
-       if(a6===25){
-         ctx.reply("1 у красной кости не было  25 раз подряд");
-      }
-       if(b1===25){
-         ctx.reply("1 у синей кости не было  25 раз подряд");
-      }
-       if(b2===25){
-         ctx.reply("2 у синей кости не было  25 раз подряд");
-      }
-       if(b3===25){
-         ctx.reply("3 у синей кости не было  25 раз подряд");
-      }
-       if(b4===25){
-         ctx.reply("4 у синей кости не было  25 раз подряд");
-      }
-       if(b5===25){
-         ctx.reply("5 у синей кости не было  25 раз подряд");
-      }
-       if(b6===25){
-         ctx.reply("6 у синей кости не было  25 раз подряд");
-      }
-      
+ 
       
       for (let i = 0; i <= 29; i++) {
          number = data.items.results[i].results[0].number
@@ -169,54 +98,52 @@ bot.hears('/bot', async (ctx) => {
          n62++;
          }
       }
+      var l1=0,l2=0,l3=0,l4=0,l5=0,l6=0;
+      var l11=0,l12=0,l13=0,l14=0,l15=0,l16=0;
+      var l21=0,l22=0,l23=0,l24=0,l25=0,l26=0;
+         for (let i = 0; i <= 29; i++) {
+         numb = data4.items.results[i].results[0].number
+         numb2 = data4.items.results[i].results[1].number
+         if(parseInt(numb,10)!=1 && parseInt(numb2,10)!=1){
+         l1++;
+         }
+          if(parseInt(numb,10)!=2 && parseInt(numb2,10)!=2){
+         l2++;
+         }
+          if(parseInt(numb,10)!=3 && parseInt(numb2,10)!=3){
+         l3++;
+         }
+          if(parseInt(numb,10)!=4 && parseInt(numb2,10)!=4){
+         l4++;
+         }
+          if(parseInt(numb,10)!=5 && parseInt(numb2,10)!=5){
+         l5++;
+         }
+          if(parseInt(numb,10)!=6 && parseInt(numb2,10)!=6){
+         l6++;
+         }
+      }
       
       
-      if(n1===30 && n11===30 && n12===30){
-         ctx.reply("1-1 не было,  90 раз подряд");
+      if(n1===30 && n11===30 && n12===30 && l1===30){
+         ctx.reply("1-1 не было,  120 раз подряд");
       }
-      if(n2===30 && n21===30 && n22===30){
-         ctx.reply("2-2 не было,  90 раз подряд");
+      if(n2===30 && n21===30 && n22===30   && l2===30){
+         ctx.reply("2-2 не было,  120 раз подряд");
       }
-      if(n3===30 && n31===30 && n32===30){
-         ctx.reply("3-3 не было,  90 раз подряд");
+      if(n3===30 && n31===30 && n32===30  && l3===30){
+         ctx.reply("3-3 не было,  120 раз подряд");
       }
-      if(n4===30 && n41===30 && n42===30){
-         ctx.reply("4-4 не было,  90 раз подряд");
+      if(n4===30 && n41===30 && n42===30  && l4===30){
+         ctx.reply("4-4 не было,  120 раз подряд");
       }
-      if(n5===30 && n51===30 && n52===30){
-         ctx.reply("5-5 не было,  90 раз подряд");
+      if(n5===30 && n51===30 && n52===30  && l5===30){
+         ctx.reply("5-5 не было,  120 раз подряд");
       }
-      if(n6===30 && n61===30 && n62===30){
-         ctx.reply("6-6 не было,  90 раз подряд");
+      if(n6===30 && n61===30 && n62===30  && l6===30){
+         ctx.reply("6-6 не было,  120 раз подряд");
       }
-      
-      for (let i = 0; i <= 11; i++) {
-         number = data.items.results[i].results[0].number
-         number2 = data.items.results[i].results[1].number
-         if(parseInt(number,10)+parseInt(number2,10)===5){
-            res++;
-         }
-         if(parseInt(number,10)+parseInt(number2,10)===6){
-            res++;
-         }
-         
-         if(parseInt(number,10)+parseInt(number2,10)===7){
-            res++;
-         }
-         
-         if(parseInt(number,10)+parseInt(number2,10)===8){
-            res++;
-         }
-         
-         if(parseInt(number,10)+parseInt(number2,10)===9){
-            res++;
-         }
-         console.log(parseInt(number,10)+parseInt(number2,10))
-      }
-      
-      if(res===12){
-         ctx.reply("Сумма костей от 5 до 9,  12 раз подряд");
-      }
+    
    }
    function good() {
       ctx.reply( "Вы запустили Бота на стратегию «Кости» ⚠ Не забудьте поставить особые уведомления на Бота, и ждите сигнала на валуйные ситуации!");

@@ -35,44 +35,44 @@ bot.hears('/bot', async (ctx) => {
       for (let i = 0; i <= 29; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
-         if(parseInt(number,10)!=1 && parseInt(number2,10)!=1){
+         if(parseInt(number,10)===1 && parseInt(number2,10)===1){
          n1++;
          }
-          if(parseInt(number,10)!=2 && parseInt(number2,10)!=2){
+          if(parseInt(number,10)===2 && parseInt(number2,10)===2){
          n2++;
          }
-          if(parseInt(number,10)!=3 && parseInt(number2,10)!=3){
+          if(parseInt(number,10)===3 && parseInt(number2,10)===3){
          n3++;
          }
-          if(parseInt(number,10)!=4 && parseInt(number2,10)!=4){
+          if(parseInt(number,10)===4 && parseInt(number2,10)===4){
          n4++;
          }
-          if(parseInt(number,10)!=5 && parseInt(number2,10)!=5){
+          if(parseInt(number,10)===5 && parseInt(number2,10)===5){
          n5++;
          }
-          if(parseInt(number,10)!=6 && parseInt(number2,10)!=6){
+          if(parseInt(number,10)===6 && parseInt(number2,10)===6){
          n6++;
          }
       }
         for (let i = 0; i <= 29; i++) {
          numbe = data2.items.results[i].results[0].number
          numbe2 = data2.items.results[i].results[1].number
-         if(parseInt(numbe,10)!=1 && parseInt(numbe2,10)!=1){
+         if(parseInt(numbe,10)===1 && parseInt(numbe2,10)===1){
          n11++;
          }
-          if(parseInt(numbe,10)!=2 && parseInt(numbe2,10)!=2){
+          if(parseInt(numbe,10)===2 && parseInt(numbe2,10)===2){
          n21++;
          }
-          if(parseInt(numbe,10)!=3 && parseInt(numbe2,10)!=3){
+          if(parseInt(numbe,10)===3 && parseInt(numbe2,10)===3){
          n31++;
          }
-          if(parseInt(numbe,10)!=4 && parseInt(numbe2,10)!=4){
+          if(parseInt(numbe,10)===4 && parseInt(numbe2,10)===4){
          n41++;
          }
-          if(parseInt(numbe,10)!=5 && parseInt(numbe2,10)!=5){
+          if(parseInt(numbe,10)===5 && parseInt(numbe2,10)===5){
          n51++;
          }
-          if(parseInt(numbe,10)!=6 && parseInt(numbe2,10)!=6){
+          if(parseInt(numbe,10)===6 && parseInt(numbe2,10)===6){
          n61++;
          }
       }
@@ -130,22 +130,22 @@ bot.hears('/bot', async (ctx) => {
       console.log('нет 4  ' +n4+'  '+n41);
       console.log('нет 5  ' +n5+'  '+n51);
       console.log('нет 6  ' +n6+'  '+n61);
-      if(n1===30 && n11===30){
+      if(n1===0 && n11===0){
          ctx.reply("1-1 не было,  60 раз подряд");
       }
-      if(n2===30 && n21===30){
+      if(n2===0 && n21===0){
          ctx.reply("2-2 не было,  60 раз подряд");
       }
-      if(n3===30 && n31===30){
+      if(n3===0 && n31===0){
          ctx.reply("3-3 не было,  60 раз подряд");
       }
-      if(n4===30 && n41===30){
+      if(n4===0 && n41===0){
          ctx.reply("4-4 не было,  60 раз подряд");
       }
-      if(n5===30 && n51===30){
+      if(n5===0 && n51===0){
          ctx.reply("5-5 не было,  60 раз подряд");
       }
-      if(n6===30 && n61===30 ){
+      if(n6===0 && n61===0 ){
          ctx.reply("6-6 не было,  60 раз подряд");
       }
     

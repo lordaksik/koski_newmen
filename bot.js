@@ -79,22 +79,22 @@ bot.hears('/bot', async (ctx) => {
             for (let i = 0; i <= 29; i++) {
          numb = data3.items.results[i].results[0].number
          numb2 = data3.items.results[i].results[1].number
-         if(parseInt(numb,10)!=1 && parseInt(numb2,10)!=1){
+         if(parseInt(numb,10)===1 && parseInt(numb2,10)===1){
          n12++;
          }
-          if(parseInt(numb,10)!=2 && parseInt(numb2,10)!=2){
+          if(parseInt(numb,10)===2 && parseInt(numb2,10)===2){
          n22++;
          }
-          if(parseInt(numb,10)!=3 && parseInt(numb2,10)!=3){
+          if(parseInt(numb,10)===3 && parseInt(numb2,10)===3){
          n32++;
          }
-          if(parseInt(numb,10)!=4 && parseInt(numb2,10)!=4){
+          if(parseInt(numb,10)===4 && parseInt(numb2,10)===4){
          n42++;
          }
-          if(parseInt(numb,10)!=5 && parseInt(numb2,10)!=5){
+          if(parseInt(numb,10)===5 && parseInt(numb2,10)===5){
          n52++;
          }
-          if(parseInt(numb,10)!=6 && parseInt(numb2,10)!=6){
+          if(parseInt(numb,10)===6 && parseInt(numb2,10)===6){
          n62++;
          }
       }
@@ -124,29 +124,29 @@ bot.hears('/bot', async (ctx) => {
          }
       }
       
-      console.log('нет 1  ' +n1+'  '+n11);
-      console.log('нет 2  ' +n2+'  '+n21);
-      console.log('нет 3  ' +n3+'  '+n31);
-      console.log('нет 4  ' +n4+'  '+n41);
-      console.log('нет 5  ' +n5+'  '+n51);
-      console.log('нет 6  ' +n6+'  '+n61);
-      if(n1===0 && n11===0){
-         ctx.reply("1-1 не было,  60 раз подряд");
+      console.log('нет 1  ' +n1+'  '+n11+'  '+n12);
+      console.log('нет 2  ' +n2+'  '+n21+'  '+n22);
+      console.log('нет 3  ' +n3+'  '+n31+'  '+n32);
+      console.log('нет 4  ' +n4+'  '+n41+'  '+n42);
+      console.log('нет 5  ' +n5+'  '+n51+'  '+n52);
+      console.log('нет 6  ' +n6+'  '+n61+'  '+n62);
+      if(n1===0 && n11===0 && n12===0){
+         ctx.reply("1-1 не было,  90 раз подряд");
       }
-      if(n2===0 && n21===0){
-         ctx.reply("2-2 не было,  60 раз подряд");
+      if(n2===0 && n21===0 && n22===0){
+         ctx.reply("2-2 не было,  90 раз подряд");
       }
-      if(n3===0 && n31===0){
-         ctx.reply("3-3 не было,  60 раз подряд");
+      if(n3===0 && n31===0 && n32===0){
+         ctx.reply("3-3 не было,  90 раз подряд");
       }
-      if(n4===0 && n41===0){
-         ctx.reply("4-4 не было,  60 раз подряд");
+      if(n4===0 && n41===0 && n42===0){
+         ctx.reply("4-4 не было,  90 раз подряд");
       }
-      if(n5===0 && n51===0){
-         ctx.reply("5-5 не было,  60 раз подряд");
+      if(n5===0 && n51===0 && n52===0){
+         ctx.reply("5-5 не было,  90 раз подряд");
       }
-      if(n6===0 && n61===0 ){
-         ctx.reply("6-6 не было,  60 раз подряд");
+      if(n6===0 && n61===0 && n62===0){
+         ctx.reply("6-6 не было,  90 раз подряд");
       }
     
    }

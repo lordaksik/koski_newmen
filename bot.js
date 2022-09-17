@@ -28,7 +28,7 @@ bot.hears('/info', async (ctx) => {
       var n12=0,n22=0,n32=0,n42=0,n52=0,n62=0;
       var a1=0,a2=0,a3=0,a4=0,a5=0,a6=0;
       var b1=0,b2=0,b3=0,b4=0,b5=0,b6=0;
-      var res6=0,res7=0,res8=0,res9=0;
+   
  
       
       for (let i = 0; i <= 29; i++) {

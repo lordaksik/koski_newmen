@@ -193,8 +193,8 @@ bot.hears('/info', async (ctx) => {
 )
 
 bot.hears('/bot', async (ctx) => {
+   try{
    async function request2() {
-       try{
       const response = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/1/")
       const data = await response.json()
       const response2 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/2/")

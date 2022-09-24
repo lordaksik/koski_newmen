@@ -524,7 +524,7 @@ bot.hears('/bot', async (ctx) => {
             for (let i = 0; i <= 24; i++) {
                 number = data.items.results[i].results[0].number
                 number2 = data.items.results[i].results[1].number
-                if (number = number2, 10) {
+                if (number === number2) {
                     sumkosti++;
                 }
             }
@@ -965,6 +965,63 @@ bot.hears('/bot', async (ctx) => {
             }
             if (chiclo1 === 0) {
                 ctx.reply('Фартуна. Не была числа 1 160 раз')
+            }
+            if (chiclo2 === 0) {
+                ctx.reply('Фартуна. Не была числа 2 160 раз')
+            }
+            if (chiclo3 === 0) {
+                ctx.reply('Фартуна. Не была числа 3 160 раз')
+            }
+            if (chiclo4 === 0) {
+                ctx.reply('Фартуна. Не была числа 4 160 раз')
+            }
+            if (chiclo5 === 0) {
+                ctx.reply('Фартуна. Не была числа 5 160 раз')
+            }
+            if (chiclo6 === 0) {
+                ctx.reply('Фартуна. Не была числа 6 160 раз')
+            }
+            if (chiclo6 === 0) {
+                ctx.reply('Фартуна. Не была числа 6 160 раз')
+            }
+            if (chiclo7 === 0) {
+                ctx.reply('Фартуна. Не была числа 7 160 раз')
+            }
+            if (chiclo8 === 0) {
+                ctx.reply('Фартуна. Не была числа 8 160 раз')
+            }
+            if (chiclo9 === 0) {
+                ctx.reply('Фартуна. Не была числа 9 160 раз')
+            }
+            if (chiclo10 === 0) {
+                ctx.reply('Фартуна. Не была числа 10 160 раз')
+            }
+            if (chiclo11 === 0) {
+                ctx.reply('Фартуна. Не была числа 11 160 раз')
+            }
+            if (chiclo12 === 0) {
+                ctx.reply('Фартуна. Не была числа 12 160 раз')
+            }
+            if (chiclo13 === 0) {
+                ctx.reply('Фартуна. Не была числа 13 160 раз')
+            }
+            if (chiclo14 === 0) {
+                ctx.reply('Фартуна. Не была числа 14 160 раз')
+            }
+            if (chiclo15 === 0) {
+                ctx.reply('Фартуна. Не была числа 15 160 раз')
+            }
+            if (chiclo16 === 0) {
+                ctx.reply('Фартуна. Не была числа 16 160 раз')
+            }
+            if (chiclo17 === 0) {
+                ctx.reply('Фартуна. Не была числа 17 160 раз')
+            }
+            if (chiclo18 === 0) {
+                ctx.reply('Фартуна. Не была числа 18 160 раз')
+            }
+            if (kubki === 0) {
+                ctx.reply('Фартуна. Не была кубка 160 раз')
             }
         }
         function good() {

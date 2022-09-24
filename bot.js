@@ -528,7 +528,7 @@ bot.hears('/bot', async (ctx) => {
                     sumkosti++;
                 }
             }
-            if (sumkosti) {
+            if (sumkosti === 0) {
                 ctx.reply('Кости ничьи небыло 25 рааздач');
             }
         }

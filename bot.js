@@ -215,7 +215,30 @@ bot.hears('/bot', async (ctx) => {
             var b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
             var res6 = 0, res7 = 0, res8 = 0, res9 = 0;
             var par34 = 0, par43 = 0, par45 = 0, par54 = 0, par32 = 0, par23 = 0;
-
+            var arr=[];
+            var arr2=[];
+            var arrtest=0;
+            var arrtest2=0;
+            for (let i = 0; i <= 29; i++) {
+                number = data.items.results[i].results[0].number
+                number2 = data.items.results[i].results[1].number
+                arr.push(parseInt(number, 10))
+                arr2.push(parseInt(number2, 10))
+            }
+            for (let i = 29; i >= 1; i--) {
+                if(arr[i]===arr[i-1]){
+                    arrtest++;
+                }
+                if(arr2[i]===arr2[i-1]){
+                    arrtest2++;
+                }
+            }
+            if (arrtest===0) {
+                ctx.reply("нет 30 совпадений красных костей");
+            }
+            if (arrtest2===0) {
+                ctx.reply("нет 30 совпадений синих костей");
+            }
 
             for (let i = 0; i <= 29; i++) {
                 number = data.items.results[i].results[0].number
@@ -1024,16 +1047,255 @@ bot.hears('/bot', async (ctx) => {
                 ctx.reply('Фартуна. Не была кубка 160 раз')
             }
         }
+       
+        async function longkosti(){
+                try {
+                    var kyb = 0;
+                    var now = new Date();
+                var date= (now.getMonth()+1) +"-"+now.getDate();
+                console.log( date)
+        var house = now.getHours();
+      console.log(house)
+        if (house > 8) {
+                const response = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/1/")
+                const data = await response.json()
+                const response2 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/2/")
+                const data2 = await response2.json()
+                const response3 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/3/")
+                const data3 = await response3.json()
+                const response4 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/4/")
+                const data4 = await response4.json()
+                const response5 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/5/")
+                const data5 = await response5.json()
+                const response6 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/6/")
+                const data6 = await response6.json() 
+                const response7 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/7/")
+                const data7 = await response7.json() 
+                const response8 = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/8/")
+                const data8 = await response8.json() 
+                var n65=0,n56=0,n12,n21,n62=0,n26=0;
+                for (let i = 0; i <= 29; i++) {
+                    number = data.items.results[i].results[0].number
+                    number2 = data.items.results[i].results[1].number
+    
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 5) {
+                        n65++;
+                    }
+                    if (parseInt(number, 10) === 5 && parseInt(number2, 10) === 6) {
+                        n56++;
+                    }
+                    if (parseInt(number, 10) === 1 && parseInt(number2, 10) === 2) {
+                        n12++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 1) {
+                        n21++;
+                    }
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 2) {
+                        n62++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 6) {
+                        n26++;
+                    }     
+                }
+                for (let i = 0; i <= 29; i++) {
+                    number = data2.items.results[i].results[0].number
+                    number2 = data2.items.results[i].results[1].number
+    
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 5) {
+                        n65++;
+                    }
+                    if (parseInt(number, 10) === 5 && parseInt(number2, 10) === 6) {
+                        n56++;
+                    }
+                    if (parseInt(number, 10) === 1 && parseInt(number2, 10) === 2) {
+                        n12++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 1) {
+                        n21++;
+                    }
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 2) {
+                        n62++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 6) {
+                        n26++;
+                    }     
+                }
+                for (let i = 0; i <= 29; i++) {
+                    number = data3.items.results[i].results[0].number
+                    number2 = data3.items.results[i].results[1].number
+    
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 5) {
+                        n65++;
+                    }
+                    if (parseInt(number, 10) === 5 && parseInt(number2, 10) === 6) {
+                        n56++;
+                    }
+                    if (parseInt(number, 10) === 1 && parseInt(number2, 10) === 2) {
+                        n12++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 1) {
+                        n21++;
+                    }
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 2) {
+                        n62++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 6) {
+                        n26++;
+                    }     
+                }
+                for (let i = 0; i <= 29; i++) {
+                    number = data4.items.results[i].results[0].number
+                    number2 = data4.items.results[i].results[1].number
+    
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 5) {
+                        n65++;
+                    }
+                    if (parseInt(number, 10) === 5 && parseInt(number2, 10) === 6) {
+                        n56++;
+                    }
+                    if (parseInt(number, 10) === 1 && parseInt(number2, 10) === 2) {
+                        n12++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 1) {
+                        n21++;
+                    }
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 2) {
+                        n62++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 6) {
+                        n26++;
+                    }     
+                }
+                for (let i = 0; i <= 29; i++) {
+                    number = data5.items.results[i].results[0].number
+                    number2 = data5.items.results[i].results[1].number
+    
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 5) {
+                        n65++;
+                    }
+                    if (parseInt(number, 10) === 5 && parseInt(number2, 10) === 6) {
+                        n56++;
+                    }
+                    if (parseInt(number, 10) === 1 && parseInt(number2, 10) === 2) {
+                        n12++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 1) {
+                        n21++;
+                    }
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 2) {
+                        n62++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 6) {
+                        n26++;
+                    }     
+                }
+                for (let i = 0; i <= 29; i++) {
+                    number = data6.items.results[i].results[0].number
+                    number2 = data6.items.results[i].results[1].number
+    
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 5) {
+                        n65++;
+                    }
+                    if (parseInt(number, 10) === 5 && parseInt(number2, 10) === 6) {
+                        n56++;
+                    }
+                    if (parseInt(number, 10) === 1 && parseInt(number2, 10) === 2) {
+                        n12++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 1) {
+                        n21++;
+                    }
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 2) {
+                        n62++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 6) {
+                        n26++;
+                    }     
+                }
+                for (let i = 0; i <= 29; i++) {
+                    number = data7.items.results[i].results[0].number
+                    number2 = data7.items.results[i].results[1].number
+    
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 5) {
+                        n65++;
+                    }
+                    if (parseInt(number, 10) === 5 && parseInt(number2, 10) === 6) {
+                        n56++;
+                    }
+                    if (parseInt(number, 10) === 1 && parseInt(number2, 10) === 2) {
+                        n12++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 1) {
+                        n21++;
+                    }
+                    if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 2) {
+                        n62++;
+                    }
+                    if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 6) {
+                        n26++;
+                    }     
+                    for (let i = 0; i <= 29; i++) {
+                        number = data8.items.results[i].results[0].number
+                        number2 = data8.items.results[i].results[1].number
+        
+                        if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 5) {
+                            n65++;
+                        }
+                        if (parseInt(number, 10) === 5 && parseInt(number2, 10) === 6) {
+                            n56++;
+                        }
+                        if (parseInt(number, 10) === 1 && parseInt(number2, 10) === 2) {
+                            n12++;
+                        }
+                        if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 1) {
+                            n21++;
+                        }
+                        if (parseInt(number, 10) === 6 && parseInt(number2, 10) === 2) {
+                            n62++;
+                        }
+                        if (parseInt(number, 10) === 2 && parseInt(number2, 10) === 6) {
+                            n26++;
+                        }     
+                    }
+
+                }
+                if (n65 === 0) {
+                    ctx.reply("6-5 не было,  240 раз подряд");
+                }
+                if (n56 === 0) {
+                    ctx.reply("5-6 не было,  240 раз подряд");
+                }
+                if (n12 === 0) {
+                    ctx.reply("1-2 не было,  240 раз подряд");
+                }
+                if (n21 === 0) {
+                    ctx.reply("1-2 не было,  240 раз подряд");
+                }
+                if (n62 === 0) {
+                    ctx.reply("1-2 не было,  240 раз подряд");
+                }
+                if (n26 === 0) {
+                    ctx.reply("1-2 не было,  240 раз подряд");
+                }
+            }
+            }
+            catch (err) {
+                console.log(err)
+            }
+        }
+       
         function good() {
             ctx.reply("Вы запустили Бота на стратегию «Кости» ⚠ Не забудьте поставить особые уведомления на Бота, и ждите сигнала на валуйные ситуации!");
             ctx.reply("Удачи! По всем вопросам пишите @BetgamesTV_Admin");
             ctx.reply('Бот отслежки запущен!')
             global.time = setInterval(request2, 30000)
+            global.time4 = setInterval(longkosti, 30000)
             global.time2 = setInterval(koleso, 90000)
             global.time3 = setInterval(baracuda, 40000)
         }
         good()
     }
+
     catch (err) {
         console.log(err)
     }
@@ -1044,7 +1306,9 @@ bot.hears('/end', async (ctx) => {
 
     try {
         clearInterval(time);
-
+        clearInterval(time2);
+        clearInterval(time3);
+        clearInterval(time4);
         ctx.reply("Пока");
     } catch (err) {
         ctx.reply("Этот бот и так выключен");
@@ -1052,4 +1316,3 @@ bot.hears('/end', async (ctx) => {
 })
 
 bot.launch()
-
